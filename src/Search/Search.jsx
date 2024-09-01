@@ -1,20 +1,21 @@
 import React from "react";
 import styles from "./Search.module.css";
-import { ReactComponent as SearchIcon } from "../../assets/search-icon.svg";
-import useAutocomplete from "@mui/base/useAutocomplete";
+import { ReactComponent as SearchIcon } from "../assets/Search icon.svg";
+import {useAutocomplete} from "@mui/base/useAutocomplete";
 import { styled } from "@mui/system";
-import { truncate } from "../../helpers/helpers";
+import { truncate } from "../helpers/helpers";
 import { useNavigate } from "react-router-dom";
 import { Tooltip } from "@mui/material";
+
 
 const Listbox = styled("ul")(({ theme }) => ({
   width: "100%",
   margin: 0,
   padding: 0,
   position: "absolute",
-  borderRadius: "0px 0px 10px 10px",
-  border: "1px solid var(--color-primary)",
-  top: 60,
+  borderRadius: theme.shape.borderRadius,  // Use theme-defined border radius
+  border: `1px solid ${theme.palette.primary.main}`,  // Use theme primary color
+  top: theme.spacing(7.5),  // 60px, using theme spacing for consistency
   height: "max-content",
   maxHeight: "500px",
   zIndex: 10,
@@ -23,18 +24,19 @@ const Listbox = styled("ul")(({ theme }) => ({
   bottom: 0,
   right: 0,
   listStyle: "none",
-  backgroundColor: "var(--color-black)",
+  backgroundColor: theme.palette.background.default,  // Use theme background color
   overflow: "auto",
   "& li.Mui-focused": {
-    backgroundColor: "#4a8df6",
-    color: "white",
+    backgroundColor: theme.palette.action.hover,  // Use theme action hover color
+    color: theme.palette.getContrastText(theme.palette.action.hover),  // Contrast text color
     cursor: "pointer",
   },
   "& li:active": {
-    backgroundColor: "#2977f5",
-    color: "white",
+    backgroundColor: theme.palette.action.selected,  // Use theme action selected color
+    color: theme.palette.getContrastText(theme.palette.action.selected),  // Contrast text color
   },
 }));
+
 
 function Search({ searchData, placeholder }) {
   const {
@@ -113,3 +115,34 @@ function Search({ searchData, placeholder }) {
 }
 
 export default Search;
+
+
+
+// const Listbox = styled("ul")(({ theme }) => ({
+//   width: "100%",
+//   margin: 0,
+//   padding: 0,
+//   position: "absolute",
+//   borderRadius: "0px 0px 10px 10px",
+//   border: "1px solid var(--color-primary)",
+//   top: 60,
+//   height: "max-content",
+//   maxHeight: "500px",
+//   zIndex: 10,
+//   overflowY: "scroll",
+//   left: 0,
+//   bottom: 0,
+//   right: 0,
+//   listStyle: "none",
+//   backgroundColor: "var(--color-black)",
+//   overflow: "auto",
+//   "& li.Mui-focused": {
+//     backgroundColor: "#4a8df6",
+//     color: "white",
+//     cursor: "pointer",
+//   },
+//   "& li:active": {
+//     backgroundColor: "#2977f5",
+//     color: "white",
+//   },
+// }));

@@ -1,10 +1,14 @@
 .hero {
-    background-color: var(--color-black);
+    background: #121212;
+    color: #FFFFFF;
     height: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 30px;
+    font-family: Poppins;
+    
+
   }
   
