@@ -1,0 +1,111 @@
+.sectionTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.toggleText{
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.sectionInnerWrapper{
+  margin-top: 18px;
+}
+
+.showAllWrapper{
+  gap: 40px; /*got it from figma*/
+  display: flex;
+  flex-wrap: wrap;  /*"flex-wrap: wrap;" specifies that the flex items(cards here) will wrap(will get adjust to new line) if necessary, Try resizing the browser's window to visualize*/
+}
+
+.progressBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+
+
+ /* .section {
+    margin: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .collapseButton {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .collapsed {
+    display: none; 
+  }
+   */
+
+
+
+
+
+   /* Section.module.css */
+/*
+.section {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.collapseButton {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.collapseButton:hover {
+  background-color: #3700b3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); 
+  gap: 16px;
+}
+
+.collapsed {
+  height: 200px;
+  overflow: hidden;
+} */
